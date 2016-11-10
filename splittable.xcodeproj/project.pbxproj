@@ -18,6 +18,9 @@
 		A06B90C01DD4C75C00F7F0EF /* splittableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B90BF1DD4C75C00F7F0EF /* splittableTests.swift */; };
 		A06B90CB1DD4C75C00F7F0EF /* splittableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B90CA1DD4C75C00F7F0EF /* splittableUITests.swift */; };
 		A06B90D91DD4C7DE00F7F0EF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A06B90D81DD4C7DE00F7F0EF /* Podfile */; };
+		A08FAC201DD4E53F00CE70E7 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FAC1F1DD4E53F00CE70E7 /* ServiceTableViewCell.swift */; };
+		A08FAC241DD4EA7100CE70E7 /* ServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FAC231DD4EA7100CE70E7 /* ServiceTableViewController.swift */; };
+		A08FAC261DD4F17200CE70E7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FAC251DD4F17200CE70E7 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		A06B90CA1DD4C75C00F7F0EF /* splittableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splittableUITests.swift; sourceTree = "<group>"; };
 		A06B90CC1DD4C75C00F7F0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A06B90D81DD4C7DE00F7F0EF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A08FAC1F1DD4E53F00CE70E7 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
+		A08FAC231DD4EA7100CE70E7 /* ServiceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTableViewController.swift; sourceTree = "<group>"; };
+		A08FAC251DD4F17200CE70E7 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		A56A607E23F6617F0C84A307 /* Pods_splittableUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_splittableUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5962E0639023CF80090C2C /* Pods-splittableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splittableTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splittableTests/Pods-splittableTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0E86F616AA608CE6F70346A /* Pods-splittable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splittable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splittable/Pods-splittable.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,9 +146,12 @@
 		A06B90A91DD4C75C00F7F0EF /* splittable */ = {
 			isa = PBXGroup;
 			children = (
+				A08FAC251DD4F17200CE70E7 /* Service.swift */,
+				A08FAC231DD4EA7100CE70E7 /* ServiceTableViewController.swift */,
 				A06B90AA1DD4C75C00F7F0EF /* AppDelegate.swift */,
 				A06B90AC1DD4C75C00F7F0EF /* ViewController.swift */,
 				A06B90AE1DD4C75C00F7F0EF /* Main.storyboard */,
+				A08FAC1F1DD4E53F00CE70E7 /* ServiceTableViewCell.swift */,
 				A06B90B11DD4C75C00F7F0EF /* Assets.xcassets */,
 				A06B90B31DD4C75C00F7F0EF /* LaunchScreen.storyboard */,
 				A06B90B61DD4C75C00F7F0EF /* Info.plist */,
@@ -450,7 +459,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08FAC241DD4EA7100CE70E7 /* ServiceTableViewController.swift in Sources */,
 				A06B90AD1DD4C75C00F7F0EF /* ViewController.swift in Sources */,
+				A08FAC261DD4F17200CE70E7 /* Service.swift in Sources */,
+				A08FAC201DD4E53F00CE70E7 /* ServiceTableViewCell.swift in Sources */,
 				A06B90AB1DD4C75C00F7F0EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
