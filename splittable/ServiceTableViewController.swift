@@ -33,9 +33,10 @@ class ServiceTableViewController: UITableViewController {
                 let json = JSON(value)
 
                 for item in json.arrayValue {
+                    let sortOrder = item["sort_order"].stringValue
                     let name = item["name"].stringValue
                     let imageURL = item["image_url"].stringValue
-                    let serviceObject = Service(name: name, imageURL: imageURL)
+                    let serviceObject = Service(sortOrder: sortOrder, name: name, imageURL: imageURL)
                     self.services.append(serviceObject)
                 }
                 
@@ -65,7 +66,7 @@ class ServiceTableViewController: UITableViewController {
         let cellIdentifier = "ServiceTableViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ServiceTableViewCell
         
-        let service = services[indexPath.row]
+        let service = services.sorted { $0.sortOrder < $1.sortOrder }[indexPath.row]
 
         cell.nameLabel.text = service.name
         cell.photoImageView.sd_setImage(with: URL(string: service.imageURL))

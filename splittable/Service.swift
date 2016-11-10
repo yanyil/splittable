@@ -12,12 +12,14 @@ class Service {
     
     // MARK: Properties
     
+    var sortOrder: String
     var name: String
     var imageURL: String
     
     // MARK: Initialization
     
-    init(name: String, imageURL: String) {
+    init(sortOrder: String, name: String, imageURL: String) {
+        self.sortOrder = sortOrder
         self.name = name
         self.imageURL = imageURL
     }
