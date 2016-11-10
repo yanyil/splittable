@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+import SDWebImage
 
 class ServiceTableViewController: UITableViewController {
     
@@ -22,16 +25,25 @@ class ServiceTableViewController: UITableViewController {
     }
     
     func loadServices() {
-        let photo1 = "string1"
-        let service1 = Service(name: "Heroes", photo: photo1)
+        let url = "https://sheetsu.com/apis/v1.0/aaf79d4763af"
         
-        let photo2 = "string2"
-        let service2 = Service(name: "Handyman", photo: photo2)
-        
-        let photo3 = "string3"
-        let service3 = Service(name: "Plumbing", photo: photo3)
-        
-        services += [service1, service2, service3]
+        Alamofire.request(url).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+
+                for item in json.arrayValue {
+                    let name = item["name"].stringValue
+                    let imageURL = item["image_url"].stringValue
+                    let serviceObject = Service(name: name, imageURL: imageURL)
+                    self.services.append(serviceObject)
+                }
+                
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +68,7 @@ class ServiceTableViewController: UITableViewController {
         let service = services[indexPath.row]
 
         cell.nameLabel.text = service.name
+        cell.photoImageView.sd_setImage(with: URL(string: service.imageURL))
 
         return cell
     }

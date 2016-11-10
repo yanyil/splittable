@@ -59,7 +59,7 @@
 		A06B90C61DD4C75C00F7F0EF /* splittableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = splittableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06B90CA1DD4C75C00F7F0EF /* splittableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splittableUITests.swift; sourceTree = "<group>"; };
 		A06B90CC1DD4C75C00F7F0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A06B90D81DD4C7DE00F7F0EF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A06B90D81DD4C7DE00F7F0EF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A08FAC1F1DD4E53F00CE70E7 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		A08FAC231DD4EA7100CE70E7 /* ServiceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTableViewController.swift; sourceTree = "<group>"; };
 		A08FAC251DD4F17200CE70E7 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };

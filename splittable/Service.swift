@@ -13,12 +13,12 @@ class Service {
     // MARK: Properties
     
     var name: String
-    var photo: String?
+    var imageURL: String
     
     // MARK: Initialization
     
-    init(name: String, photo: String?) {
+    init(name: String, imageURL: String) {
         self.name = name
-        self.photo = photo
+        self.imageURL = imageURL
     }
 }

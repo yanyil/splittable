@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import SwiftyJSON
 
-class ViewController: UIViewController {
-
+class ViewController: UITableViewController {
+    
+    var petitions = [[String: String]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {

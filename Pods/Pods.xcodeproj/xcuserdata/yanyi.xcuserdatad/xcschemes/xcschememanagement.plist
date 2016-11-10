@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-splittable.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -15,6 +20,11 @@
 			<false/>
 		</dict>
 		<key>Pods-splittableUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3F9FE0CAB705B3B9EC5B0F4B8A77BDE2</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ADA819B39C29D7D34E71D1D66778B21D</key>
+		<key>C37D67878F1CCB1AFCADF561C950275E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E21EF2B7144411F8CBFCB0B0BA24E83C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2F9A56F44ECB997CE22C3EB7BEDE2F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

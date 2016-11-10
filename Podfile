@@ -7,6 +7,8 @@ target 'splittable' do
 
   # Pods for splittable
     pod 'SwiftyJSON'
+    pod 'Alamofire', '~> 4.0'
+    pod 'SDWebImage', '~>3.8'
 
   target 'splittableTests' do
     inherit! :search_paths
