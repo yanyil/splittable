@@ -14,13 +14,15 @@ class Service {
     
     var sortOrder: String
     var name: String
+    var url: String
     var imageURL: String
     
     // MARK: Initialization
     
-    init(sortOrder: String, name: String, imageURL: String) {
+    init(sortOrder: String, name: String, url: String, imageURL: String) {
         self.sortOrder = sortOrder
         self.name = name
+        self.url = url
         self.imageURL = imageURL
     }
 }

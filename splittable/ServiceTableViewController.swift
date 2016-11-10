@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import SDWebImage
+import SafariServices
 
 class ServiceTableViewController: UITableViewController {
     
@@ -25,9 +26,9 @@ class ServiceTableViewController: UITableViewController {
     }
     
     func loadServices() {
-        let url = "https://sheetsu.com/apis/v1.0/aaf79d4763af"
+        let apiURL = "https://sheetsu.com/apis/v1.0/aaf79d4763af"
         
-        Alamofire.request(url).validate().responseJSON { response in
+        Alamofire.request(apiURL).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -35,10 +36,13 @@ class ServiceTableViewController: UITableViewController {
                 for item in json.arrayValue {
                     let sortOrder = item["sort_order"].stringValue
                     let name = item["name"].stringValue
+                    let url = item["url"].stringValue
                     let imageURL = item["image_url"].stringValue
-                    let serviceObject = Service(sortOrder: sortOrder, name: name, imageURL: imageURL)
+                    let serviceObject = Service(sortOrder: sortOrder, name: name, url: url, imageURL: imageURL)
                     self.services.append(serviceObject)
                 }
+                
+                self.services = self.services.sorted { $0.sortOrder < $1.sortOrder }
                 
                 self.tableView.reloadData()
             case .failure(let error):
@@ -66,12 +70,25 @@ class ServiceTableViewController: UITableViewController {
         let cellIdentifier = "ServiceTableViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ServiceTableViewCell
         
-        let service = services.sorted { $0.sortOrder < $1.sortOrder }[indexPath.row]
+        let service = services[indexPath.row]
 
         cell.nameLabel.text = service.name
         cell.photoImageView.sd_setImage(with: URL(string: service.imageURL))
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let service = services[indexPath.row]
+        
+        openURL(urlString: service.url)
+    }
+    
+    func openURL(urlString: String) {
+        if let url = URL(string: urlString) {
+            let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+            present(vc, animated: true)
+        }
     }
 
     /*
