@@ -25,4 +25,5 @@ class Service {
         self.url = url
         self.imageURL = imageURL
     }
+    
 }
