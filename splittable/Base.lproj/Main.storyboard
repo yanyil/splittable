@@ -26,19 +26,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bx-kv-Bhi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8bx-kv-Bhi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="8bx-kv-Bhi" firstAttribute="top" secondItem="9ah-mS-qLg" secondAttribute="top" id="7Yt-Os-70Z"/>
-                                        <constraint firstAttribute="trailing" secondItem="8bx-kv-Bhi" secondAttribute="trailing" id="DPp-D0-fP8"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="8bx-kv-Bhi" secondAttribute="bottom" constant="-1" id="Ix3-Am-nq4"/>
-                                        <constraint firstItem="8bx-kv-Bhi" firstAttribute="leading" secondItem="9ah-mS-qLg" secondAttribute="leading" id="Xdg-Cm-IZg"/>
-                                        <constraint firstItem="8bx-kv-Bhi" firstAttribute="leading" secondItem="9ah-mS-qLg" secondAttribute="leading" id="Ypw-wk-gEH"/>
-                                        <constraint firstAttribute="trailing" secondItem="8bx-kv-Bhi" secondAttribute="trailing" id="cNw-rR-pvY"/>
-                                        <constraint firstAttribute="bottom" secondItem="8bx-kv-Bhi" secondAttribute="bottom" constant="-1" id="stQ-so-bJO"/>
-                                        <constraint firstItem="8bx-kv-Bhi" firstAttribute="top" secondItem="9ah-mS-qLg" secondAttribute="top" id="u6B-Rc-3WV"/>
+                                        <constraint firstAttribute="trailing" secondItem="8bx-kv-Bhi" secondAttribute="trailing" id="5Vc-8I-nHg"/>
+                                        <constraint firstAttribute="bottom" secondItem="8bx-kv-Bhi" secondAttribute="bottom" id="IR2-Bh-igG"/>
+                                        <constraint firstItem="8bx-kv-Bhi" firstAttribute="top" secondItem="9ah-mS-qLg" secondAttribute="top" id="Pvp-eR-Wlr"/>
+                                        <constraint firstItem="8bx-kv-Bhi" firstAttribute="leading" secondItem="9ah-mS-qLg" secondAttribute="leading" id="qZO-Ej-Okx"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -89,7 +85,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vcc-lN-k7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-570.39999999999998" y="119.1904047976012"/>
+            <point key="canvasLocation" x="-570.5" y="118.5"/>
         </scene>
     </scenes>
 </document>
