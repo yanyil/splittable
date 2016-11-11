@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,34 +14,70 @@
         <scene sceneID="bCH-57-UpQ">
             <objects>
                 <tableViewController id="B1w-Da-eu6" customClass="ServiceTableViewController" customModule="splittable" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="mAJ-vw-nh8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="mAJ-vw-nh8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ServiceTableViewCell" rowHeight="120" id="eXJ-vl-30W" customClass="ServiceTableViewCell" customModule="splittable" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BannerTableViewCell" id="eXJ-vl-30W" customClass="ServiceTableViewCell" customModule="splittable" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eXJ-vl-30W" id="9ah-mS-qLg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bx-kv-Bhi">
-                                            <rect key="frame" x="0.0" y="0.0" width="187" height="120"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bx-kv-Bhi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuh-MF-lsB">
-                                            <rect key="frame" x="195" y="50" width="172" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8bx-kv-Bhi" firstAttribute="top" secondItem="9ah-mS-qLg" secondAttribute="top" id="7Yt-Os-70Z"/>
+                                        <constraint firstAttribute="trailing" secondItem="8bx-kv-Bhi" secondAttribute="trailing" id="DPp-D0-fP8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8bx-kv-Bhi" secondAttribute="bottom" constant="-1" id="Ix3-Am-nq4"/>
+                                        <constraint firstItem="8bx-kv-Bhi" firstAttribute="leading" secondItem="9ah-mS-qLg" secondAttribute="leading" id="Xdg-Cm-IZg"/>
+                                        <constraint firstItem="8bx-kv-Bhi" firstAttribute="leading" secondItem="9ah-mS-qLg" secondAttribute="leading" id="Ypw-wk-gEH"/>
+                                        <constraint firstAttribute="trailing" secondItem="8bx-kv-Bhi" secondAttribute="trailing" id="cNw-rR-pvY"/>
+                                        <constraint firstAttribute="bottom" secondItem="8bx-kv-Bhi" secondAttribute="bottom" constant="-1" id="stQ-so-bJO"/>
+                                        <constraint firstItem="8bx-kv-Bhi" firstAttribute="top" secondItem="9ah-mS-qLg" secondAttribute="top" id="u6B-Rc-3WV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="photoImageView" destination="8bx-kv-Bhi" id="kfV-aa-X2A"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ServiceTableViewCell" id="Eq6-5x-Bq3" customClass="ServiceTableViewCell" customModule="splittable" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="208" width="375" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eq6-5x-Bq3" id="EA0-qP-Czt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJq-on-d1S">
+                                            <rect key="frame" x="101" y="143" width="172" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgt-d2-0gq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="135" id="1XG-Hc-8nT"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="MJq-on-d1S" secondAttribute="trailing" constant="94" id="8U4-0v-E1z"/>
+                                        <constraint firstItem="MJq-on-d1S" firstAttribute="leading" secondItem="EA0-qP-Czt" secondAttribute="leadingMargin" constant="93" id="9dl-JA-zmL"/>
+                                        <constraint firstItem="dgt-d2-0gq" firstAttribute="top" secondItem="EA0-qP-Czt" secondAttribute="top" id="Bga-GC-CRS"/>
+                                        <constraint firstItem="MJq-on-d1S" firstAttribute="top" secondItem="dgt-d2-0gq" secondAttribute="bottom" constant="8" symbolic="YES" id="C62-5E-d5e"/>
+                                        <constraint firstItem="dgt-d2-0gq" firstAttribute="leading" secondItem="EA0-qP-Czt" secondAttribute="leading" id="Cam-V8-i9H"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="MJq-on-d1S" secondAttribute="bottom" constant="0.5" id="WTK-jk-sX3"/>
+                                        <constraint firstItem="dgt-d2-0gq" firstAttribute="centerX" secondItem="MJq-on-d1S" secondAttribute="centerX" id="aJT-sF-5B3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="nameLabel" destination="Nuh-MF-lsB" id="Jv5-MA-EOx"/>
-                                    <outlet property="photoImageView" destination="8bx-kv-Bhi" id="kfV-aa-X2A"/>
+                                    <outlet property="nameLabel" destination="MJq-on-d1S" id="hgs-w4-dYd"/>
+                                    <outlet property="photoImageView" destination="dgt-d2-0gq" id="aJ4-FF-utZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

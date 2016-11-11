@@ -20,7 +20,7 @@ class ServiceTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         loadServices()
     }
     
@@ -73,15 +73,24 @@ class ServiceTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "ServiceTableViewCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ServiceTableViewCell
-        
         let service = services[indexPath.row]
-
-        cell.nameLabel.text = service.name
-        cell.photoImageView.sd_setImage(with: URL(string: service.imageURL))
-
-        return cell
+        
+        if service.url.isEmpty {
+            let cellIdentifier = "BannerTableViewCell"
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ServiceTableViewCell
+            
+            cell.photoImageView.sd_setImage(with: URL(string: service.imageURL))
+            
+            return cell
+        } else {
+            let cellIdentifier = "ServiceTableViewCell"
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ServiceTableViewCell
+            
+            cell.nameLabel.text = service.name
+            cell.photoImageView.sd_setImage(with: URL(string: service.imageURL))
+            
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
