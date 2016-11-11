@@ -10,6 +10,7 @@
 		429953AF7798A0558466ABC1 /* Pods_splittable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9755B787C99DE8ABFE199BB8 /* Pods_splittable.framework */; };
 		654BC5A016BE145AED8EA8E8 /* Pods_splittableTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E5DC0212E2CDC1CD8940D0 /* Pods_splittableTests.framework */; };
 		920F167E7B1DD9A1EF12885E /* Pods_splittableUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56A607E23F6617F0C84A307 /* Pods_splittableUITests.framework */; };
+		A06544251DD5F52300014371 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A06544241DD5F52300014371 /* README.md */; };
 		A06B90AB1DD4C75C00F7F0EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B90AA1DD4C75C00F7F0EF /* AppDelegate.swift */; };
 		A06B90B01DD4C75C00F7F0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A06B90AE1DD4C75C00F7F0EF /* Main.storyboard */; };
 		A06B90B21DD4C75C00F7F0EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A06B90B11DD4C75C00F7F0EF /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		86330E94DD6ADA28822544B4 /* Pods-splittableUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splittableUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splittableUITests/Pods-splittableUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9755B787C99DE8ABFE199BB8 /* Pods_splittable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_splittable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9791B7E4A51389FD00336577 /* Pods-splittableUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splittableUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-splittableUITests/Pods-splittableUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A06544241DD5F52300014371 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A06B90A71DD4C75C00F7F0EF /* splittable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splittable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06B90AA1DD4C75C00F7F0EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A06B90AF1DD4C75C00F7F0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		A06B909E1DD4C75C00F7F0EF = {
 			isa = PBXGroup;
 			children = (
+				A06544241DD5F52300014371 /* README.md */,
 				A06B90A91DD4C75C00F7F0EF /* splittable */,
 				A06B90BE1DD4C75C00F7F0EF /* splittableTests */,
 				A06B90C91DD4C75C00F7F0EF /* splittableUITests */,
@@ -456,6 +459,7 @@
 			files = (
 				A08FAC241DD4EA7100CE70E7 /* ServiceTableViewController.swift in Sources */,
 				A08F3B411DD5B3F900319890 /* Service.swift in Sources */,
+				A06544251DD5F52300014371 /* README.md in Sources */,
 				A08FAC201DD4E53F00CE70E7 /* ServiceTableViewCell.swift in Sources */,
 				A06B90AB1DD4C75C00F7F0EF /* AppDelegate.swift in Sources */,
 			);
