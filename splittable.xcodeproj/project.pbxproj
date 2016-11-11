@@ -16,10 +16,11 @@
 		A06B90B51DD4C75C00F7F0EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A06B90B31DD4C75C00F7F0EF /* LaunchScreen.storyboard */; };
 		A06B90C01DD4C75C00F7F0EF /* splittableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B90BF1DD4C75C00F7F0EF /* splittableTests.swift */; };
 		A06B90CB1DD4C75C00F7F0EF /* splittableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B90CA1DD4C75C00F7F0EF /* splittableUITests.swift */; };
-		A06B90D91DD4C7DE00F7F0EF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A06B90D81DD4C7DE00F7F0EF /* Podfile */; };
+		A08F3B411DD5B3F900319890 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F3B401DD5B3F900319890 /* Service.swift */; };
+		A08F3B421DD5B3F900319890 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F3B401DD5B3F900319890 /* Service.swift */; };
+		A08F3B431DD5B3F900319890 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F3B401DD5B3F900319890 /* Service.swift */; };
 		A08FAC201DD4E53F00CE70E7 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FAC1F1DD4E53F00CE70E7 /* ServiceTableViewCell.swift */; };
 		A08FAC241DD4EA7100CE70E7 /* ServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FAC231DD4EA7100CE70E7 /* ServiceTableViewController.swift */; };
-		A08FAC261DD4F17200CE70E7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FAC251DD4F17200CE70E7 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +58,9 @@
 		A06B90C61DD4C75C00F7F0EF /* splittableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = splittableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06B90CA1DD4C75C00F7F0EF /* splittableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splittableUITests.swift; sourceTree = "<group>"; };
 		A06B90CC1DD4C75C00F7F0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A06B90D81DD4C7DE00F7F0EF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A08F3B401DD5B3F900319890 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		A08FAC1F1DD4E53F00CE70E7 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		A08FAC231DD4EA7100CE70E7 /* ServiceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTableViewController.swift; sourceTree = "<group>"; };
-		A08FAC251DD4F17200CE70E7 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		A56A607E23F6617F0C84A307 /* Pods_splittableUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_splittableUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5962E0639023CF80090C2C /* Pods-splittableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splittableTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splittableTests/Pods-splittableTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0E86F616AA608CE6F70346A /* Pods-splittable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splittable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splittable/Pods-splittable.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,7 +121,6 @@
 		A06B909E1DD4C75C00F7F0EF = {
 			isa = PBXGroup;
 			children = (
-				A06B90D81DD4C7DE00F7F0EF /* Podfile */,
 				A06B90A91DD4C75C00F7F0EF /* splittable */,
 				A06B90BE1DD4C75C00F7F0EF /* splittableTests */,
 				A06B90C91DD4C75C00F7F0EF /* splittableUITests */,
@@ -144,7 +143,7 @@
 		A06B90A91DD4C75C00F7F0EF /* splittable */ = {
 			isa = PBXGroup;
 			children = (
-				A08FAC251DD4F17200CE70E7 /* Service.swift */,
+				A08F3B401DD5B3F900319890 /* Service.swift */,
 				A08FAC231DD4EA7100CE70E7 /* ServiceTableViewController.swift */,
 				A06B90AA1DD4C75C00F7F0EF /* AppDelegate.swift */,
 				A06B90AE1DD4C75C00F7F0EF /* Main.storyboard */,
@@ -292,7 +291,6 @@
 			files = (
 				A06B90B51DD4C75C00F7F0EF /* LaunchScreen.storyboard in Resources */,
 				A06B90B21DD4C75C00F7F0EF /* Assets.xcassets in Resources */,
-				A06B90D91DD4C7DE00F7F0EF /* Podfile in Resources */,
 				A06B90B01DD4C75C00F7F0EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,7 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A08FAC241DD4EA7100CE70E7 /* ServiceTableViewController.swift in Sources */,
-				A08FAC261DD4F17200CE70E7 /* Service.swift in Sources */,
+				A08F3B411DD5B3F900319890 /* Service.swift in Sources */,
 				A08FAC201DD4E53F00CE70E7 /* ServiceTableViewCell.swift in Sources */,
 				A06B90AB1DD4C75C00F7F0EF /* AppDelegate.swift in Sources */,
 			);
@@ -468,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A06B90C01DD4C75C00F7F0EF /* splittableTests.swift in Sources */,
+				A08F3B421DD5B3F900319890 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A06B90CB1DD4C75C00F7F0EF /* splittableUITests.swift in Sources */,
+				A08F3B431DD5B3F900319890 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +532,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -582,6 +583,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -611,6 +613,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0E86F616AA608CE6F70346A /* Pods-splittable.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = splittable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -624,6 +627,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D9F31F026BCB2D6435722F4A /* Pods-splittable.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = splittable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

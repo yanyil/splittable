@@ -22,7 +22,6 @@ class ServiceTableViewController: UITableViewController {
         super.viewDidLoad()
         
         loadServices()
-
     }
     
     func loadServices() {
@@ -33,21 +32,28 @@ class ServiceTableViewController: UITableViewController {
             case .success(let value):
                 let json = JSON(value)
 
-                for item in json.arrayValue {
-                    let sortOrder = item["sort_order"].stringValue
-                    let name = item["name"].stringValue
-                    let url = item["url"].stringValue
-                    let imageURL = item["image_url"].stringValue
-                    let serviceObject = Service(sortOrder: sortOrder, name: name, url: url, imageURL: imageURL)
-                    self.services.append(serviceObject)
-                }
-                
-                self.services = self.services.sorted { $0.sortOrder < $1.sortOrder }
-                
-                self.tableView.reloadData()
+                self.parse(json: json)
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+    
+    func parse(json: JSON) {
+        for item in json.arrayValue {
+            let sortOrder = item["sort_order"].stringValue
+            let name = item["name"].stringValue
+            let url = item["url"].stringValue
+            let imageURL = item["image_url"].stringValue
+            let serviceObject = Service(sortOrder: sortOrder, name: name, url: url, imageURL: imageURL)
+            
+            services.append(serviceObject)
+        }
+        
+        services = services.sorted { $0.sortOrder < $1.sortOrder }
+        
+        DispatchQueue.main.async { [unowned self] in
+            self.tableView.reloadData()
         }
     }
 
