@@ -20,8 +20,12 @@ class ServiceTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadServices()
+        
+        if let savedServices = loadSavedServices() {
+            services += savedServices
+        } else {
+            loadServices()
+        }
     }
     
     func loadServices() {
@@ -51,6 +55,7 @@ class ServiceTableViewController: UITableViewController {
         }
         
         services = services.sorted { $0.sortOrder < $1.sortOrder }
+        saveServices()
         
         DispatchQueue.main.async { [unowned self] in
             self.tableView.reloadData()
@@ -103,6 +108,19 @@ class ServiceTableViewController: UITableViewController {
             let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
             present(vc, animated: true)
         }
+    }
+    
+    // MARK: NSCoding
+    
+    func saveServices() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(services, toFile: Service.archiveURL.path)
+        if !isSuccessfulSave {
+            print("Failed to save services...")
+        }
+    }
+    
+    func loadSavedServices() -> [Service]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Service.archiveURL.path) as? [Service]
     }
 
 }
